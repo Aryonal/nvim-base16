@@ -90,6 +90,7 @@ function M.with_config(config)
         illuminate = true,
         lsp_semantic = true,
         mini_completion = true,
+        gitsign = true,
     }, config or M.config or {})
 end
 
@@ -156,7 +157,9 @@ function M.setup(colors, config)
     hi.Title                              = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
     hi.Conceal                            = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.Cursor                             = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil }
-    hi.NonText                            = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.Whitespace                         = { guifg = M.colors.base02, guibg = nil, gui = nil, guisp = nil }
+    -- hi.NonText                            = { guifg = M.colors.base03, guibg = nil, gui = nil, guisp = nil }
+    hi.NonText                            = 'Whitespace'
     hi.LineNr                             = { guifg = M.colors.base04, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.SignColumn                         = { guifg = M.colors.base04, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.StatusLine                         = { guifg = M.colors.base05, guibg = M.colors.base02, gui = 'none', guisp = nil }
@@ -244,10 +247,10 @@ function M.setup(colors, config)
     hi.SpellCap                           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0D }
     hi.SpellRare                          = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
 
-    hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
-    hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
-    hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
-    hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = darken(M.colors.base08, 0.1), gui = 'none', guisp = nil }
+    hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = darken(M.colors.base0E, 0.1), gui = 'none', guisp = nil }
+    hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = darken(M.colors.base05, 0.1), gui = 'none', guisp = nil }
+    hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = darken(M.colors.base0C, 0.1), gui = 'none', guisp = nil }
     hi.DiagnosticUnderlineError           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
     hi.DiagnosticUnderlineWarning         = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
     hi.DiagnosticUnderlineWarn            = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
@@ -487,7 +490,6 @@ function M.setup(colors, config)
         hi.IndentBlanklineChar        = { guifg = M.colors.base02, gui = 'nocombine' }
         hi.IndentBlanklineContextChar = { guifg = M.colors.base04, gui = 'nocombine' }
         hi.IndentBlanklineIndent      = { guifg = M.colors.base02, gui = 'nocombine' }
-        hi.Whitespace                 = { guifg = M.colors.base02, guibg = nil, gui = nil, guisp = nil }
     end
 
     if M.config.cmp then
@@ -559,6 +561,11 @@ function M.setup(colors, config)
 
     if M.config.mini_completion then
         hi.MiniCompletionActiveParameter = 'CursorLine'
+    end
+
+    if M.config.gitsign then
+        hi.GitSignsCurrentLineBlame = { guifg = M.colors.base03, guibg = nil }
+
     end
 
 
