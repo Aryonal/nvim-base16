@@ -488,7 +488,7 @@ function M.setup(colors, config)
 
     if M.config.indentblankline then
         hi.IndentBlanklineChar        = { guifg = M.colors.base02, gui = 'nocombine' }
-        hi.IndentBlanklineContextChar = { guifg = M.colors.base04, gui = 'nocombine' }
+        hi.IndentBlanklineContextChar = { guifg = M.colors.base05, gui = 'nocombine' }
         hi.IndentBlanklineIndent      = { guifg = M.colors.base02, gui = 'nocombine' }
     end
 
