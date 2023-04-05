@@ -257,10 +257,10 @@ function M.setup(colors, config)
     hi.SpellCap                           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0D }
     hi.SpellRare                          = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
 
-    hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = darken_to_bg(M.colors.base08, 0.8, M.colors.base00), gui = 'none', guisp = nil }
-    hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = darken_to_bg(M.colors.base0E, 0.8, M.colors.base00), gui = 'none', guisp = nil }
-    hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = darken_to_bg(M.colors.base05, 0.8, M.colors.base00), gui = 'none', guisp = nil }
-    hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = darken_to_bg(M.colors.base0C, 0.8, M.colors.base00), gui = 'none', guisp = nil }
+    hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = darken_to_bg(M.colors.base08, 0.7, M.colors.base00), gui = 'none', guisp = nil }
+    hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = darken_to_bg(M.colors.base0E, 0.7, M.colors.base00), gui = 'none', guisp = nil }
+    hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = darken_to_bg(M.colors.base05, 0.7, M.colors.base00), gui = 'none', guisp = nil }
+    hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = darken_to_bg(M.colors.base0C, 0.7, M.colors.base00), gui = 'none', guisp = nil }
     hi.DiagnosticUnderlineError           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
     hi.DiagnosticUnderlineWarning         = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
     hi.DiagnosticUnderlineWarn            = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
