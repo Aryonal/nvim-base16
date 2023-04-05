@@ -413,7 +413,7 @@ function M.setup(colors, config)
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = 'none', guisp = nil }
 
     hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-    hi.FloatBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.FloatBorder       = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.NormalNC          = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.TermCursor        = { guifg = M.colors.base00, guibg = M.colors.base05, gui = 'none', guisp = nil }
     hi.TermCursorNC      = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil }
@@ -447,8 +447,8 @@ function M.setup(colors, config)
             hi.TelescopeSelection    = { guifg = nil, guibg = darkerstatusline, gui = nil, guisp = nil }
             hi.TelescopePreviewLine  = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
         else
-            hi.TelescopeBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-            hi.TelescopePromptBorder = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopeBorder       = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopePromptBorder = { guifg = M.colors.base03, guibg = M.colors.base00, gui = nil, guisp = nil }
             hi.TelescopePromptNormal = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
             hi.TelescopePromptPrefix = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
             hi.TelescopeNormal       = { guifg = nil, guibg = M.colors.base00, gui = nil, guisp = nil }
@@ -486,12 +486,14 @@ function M.setup(colors, config)
     if M.config.indentblankline then
         hi.IndentBlanklineChar        = { guifg = M.colors.base02, gui = 'nocombine' }
         hi.IndentBlanklineContextChar = { guifg = M.colors.base04, gui = 'nocombine' }
+        hi.IndentBlanklineIndent      = { guifg = M.colors.base02, gui = 'nocombine' }
+        hi.Whitespace                 = { guifg = M.colors.base02, guibg = nil, gui = nil, guisp = nil }
     end
 
     if M.config.cmp then
         hi.CmpDocumentationBorder   = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
         hi.CmpDocumentation         = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-        hi.CmpItemAbbr              = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
+        hi.CmpItemAbbr              = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemAbbrDeprecated    = { guifg = M.colors.base03, guibg = nil, gui = 'strikethrough', guisp = nil }
         hi.CmpItemAbbrMatch         = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
@@ -521,9 +523,9 @@ function M.setup(colors, config)
     end
 
     if M.config.illuminate then
-        hi.IlluminatedWordText  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-        hi.IlluminatedWordRead  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-        hi.IlluminatedWordWrite = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+        hi.IlluminatedWordText  = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
+        hi.IlluminatedWordRead  = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
+        hi.IlluminatedWordWrite = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
     end
 
     if M.config.lsp_semantic then
