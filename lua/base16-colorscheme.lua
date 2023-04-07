@@ -101,6 +101,7 @@ function M.with_config(config)
         lsp_semantic = true,
         mini_completion = true,
         gitsign = true,
+        lualine = true,
     }, config or M.config or {})
 end
 
@@ -538,6 +539,10 @@ function M.setup(colors, config)
         hi.IlluminatedWordText  = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
         hi.IlluminatedWordRead  = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
         hi.IlluminatedWordWrite = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
+    end
+
+    if M.config.lualine then
+        hi.lualine_c_normal = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
     end
 
     if M.config.lsp_semantic then
