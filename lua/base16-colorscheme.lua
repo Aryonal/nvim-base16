@@ -542,7 +542,7 @@ function M.setup(colors, config)
     end
 
     if M.config.lualine then
-        hi.lualine_c_normal = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
+        hi.lualine_c_normal = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
     end
 
     if M.config.lsp_semantic then
