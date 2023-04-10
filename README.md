@@ -1,6 +1,8 @@
-# nvim-base16
-
 **This repo is a fork of [RRethy/nvim-base16](https://github.com/RRethy/nvim-base16). Tuned for personal use.**
+
+---
+
+# nvim-base16
 
 Neovim plugin for building base16 colorschemes with support for Neovim's
 builtin LSP and Treesitter.
