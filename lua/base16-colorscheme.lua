@@ -555,9 +555,9 @@ function M.setup(colors, config)
         -- TODO: figure out what these should be
         hi['@lsp.type.namespace'] = '@namespace'
         hi['@lsp.type.type'] = '@type'
-        hi['@lsp.type.class'] = '@type'
-        hi['@lsp.type.enum'] = '@type'
-        hi['@lsp.type.interface'] = '@type'
+        hi['@lsp.type.class'] = '@class'
+        hi['@lsp.type.enum'] = '@enum'
+        hi['@lsp.type.interface'] = '@interface'
         hi['@lsp.type.struct'] = '@structure'
         hi['@lsp.type.parameter'] = '@parameter'
         hi['@lsp.type.variable'] = '@variable'
@@ -566,7 +566,7 @@ function M.setup(colors, config)
         hi['@lsp.type.function'] = '@function'
         hi['@lsp.type.method'] = '@method'
         hi['@lsp.type.macro'] = '@macro'
-        hi['@lsp.type.decorator'] = '@function'
+        hi['@lsp.type.decorator'] = '@decorator'
     end
 
     if M.config.mini_completion then
